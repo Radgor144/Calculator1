@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: League Spartan;
+}
+
+.theme{
+    background-color: hsl(222, 26%, 31%);
+    color: white;
+}
+
+.keybg1{
+    background-color: hsl(223, 31%, 20%);
+}
+.screenbg1{
+    background-color: hsl(224, 36%, 15%);
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+main{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2rem;
+    color: white;
+}
+
+
+
+#calc{
+    font-size: 2rem;
+}
+
+#theme{
+    margin-left: auto;
+}
+
+.head-themes{
+    display: flex;
+    flex-direction: column;
+}
+
+.head-num{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 .2rem 0 .2rem;
+}
+
+.suwak{
+    width: 80px;
+    height: 25px;
+    border-radius: 40px 40px 40px 40px;
+    background-color: hsl(223, 31%, 20%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 .5rem 0 .5rem;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsl(25, 98%, 40%);
+}
+
+.dotAnim1{
+    transform: translateX(23px);
+    transition: 1s;
+}
+
+.dotAnim2{
+    transform: translateX(50px);
+    transition: 1s;
+}
+
+.dotAnim3{
+    transform: translateX(0px);
+    transition: 1s;
+}
+
+.screen{
+    width: 100%;
+    height: 120px;
+    background-color: hsl(224, 36%, 15%);
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.wynik{
+    margin-right: 2rem;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+}
+
+.keyboard{
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    background-color: hsl(223, 31%, 20%);
+    padding: 2rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    border: 1px;
+}
+
+.btn{
+    width: 20%;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+    color: hsl(221, 14%, 31%);
+    padding: .7rem 0 .7rem 0;
+}
+
+.themekey1{
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+}
+
+.themekey3{
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+    color: hsl(52, 100%, 62%);
+}
+
+.btn:hover, .btn-b:hover, .dot:hover{
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: hsl(31, 100%, 95%);
+}
+
+.reset:hover, .del:hover{
+    background-color: hsl(225, 35%, 66%);
+}
+
+.rowna:hover, .dot:hover{
+    background-color: hsl(6, 83%, 63%);
+}
+
+.del{
+    font-size: 2rem;
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+    color: white;
+}
+
+.btn-b{
+    width: 47%;
+    padding: 1rem 0 1rem 0;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.reset{
+    background-color: #637097;
+    box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%); 
+}
+
+.rowna{
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%); 
+}
