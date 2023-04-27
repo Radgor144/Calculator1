@@ -111,6 +111,7 @@ main{
     align-items: flex-end;
     flex-direction: column;
     padding: 1.5rem;
+    overflow: hidden;
 }
 
 .wynik{

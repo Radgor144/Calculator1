@@ -113,12 +113,13 @@ let poprzedniZnak =0;
 let dzialanie = (oper) => {
     if(oper.value == "+"){
         wynik.innerHTML = aktualneDzialanie + poprzednieDzialanie;    
-        aktualneDzialanie = parseInt(poprzednie.innerHTML);
+        aktualneDzialanie = parseFloat(poprzednie.innerHTML);
+        
     }
     if(oper.value == "-"){
         if(poprzednieDzialanie!=0){
             wynik.innerHTML = poprzednieDzialanie - aktualneDzialanie; 
-            aktualneDzialanie = parseInt(poprzednie.innerHTML); 
+            aktualneDzialanie = parseFloat(poprzednie.innerHTML); 
         }
     }
     if(oper.value == "/"){
@@ -126,13 +127,13 @@ let dzialanie = (oper) => {
         console.log(poprzednieDzialanie);
         if(poprzednieDzialanie!=0){
             wynik.innerHTML = poprzednieDzialanie / aktualneDzialanie; 
-            aktualneDzialanie = parseInt(poprzednie.innerHTML); 
+            aktualneDzialanie = parseFloat(poprzednie.innerHTML); 
         }
     }
     if(oper.value == "x"){
         if(poprzednieDzialanie!=0){
             wynik.innerHTML = poprzednieDzialanie * aktualneDzialanie; 
-            aktualneDzialanie = parseInt(poprzednie.innerHTML); 
+            aktualneDzialanie = parseFloat(poprzednie.innerHTML); 
         } 
     }
 }
@@ -144,13 +145,13 @@ nums.forEach((num) => {
         if(!operacjaClicked){
             if(wynik.innerHTML.length <11){
                 wynik.innerHTML += num.value;
-                aktualneDzialanie = parseInt(wynik.innerHTML);
+                aktualneDzialanie = parseFloat(wynik.innerHTML);
             }
         }
         else{ 
-            poprzednieDzialanie = parseInt(wynik.innerHTML);
+            poprzednieDzialanie = parseFloat(wynik.innerHTML);
             wynik.innerHTML = num.value;
-            aktualneDzialanie = parseInt(wynik.innerHTML);
+            aktualneDzialanie = parseFloat(wynik.innerHTML);
         }
         x=1;
         operacjaClicked = false;
@@ -201,4 +202,8 @@ reset.addEventListener('click', () => {
 rowna.addEventListener('click', () => {
     dzialanie(poprzedniZnak);
     resetAll();
+});
+
+del.addEventListener("click", () => {
+    wynik.innerHTML = wynik.innerHTML.substring(0,wynik.innerHTML.length-1);
 });
